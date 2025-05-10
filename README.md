@@ -49,7 +49,7 @@ The following snippet compares two approaches for the same transformation (creat
 
 Since this was tested on the `FactInternetSales` table (~60K rows), both executed quickly, but **native PySpark was noticeably faster** (first job) than the Pandas UDF approach.
 
-![image.png](attachment:df81709d-5fbe-4fa1-8018-95cfe7da8d88:image.png)
+![image_alt](https://github.com/yazanziyad98/databricks_pyspark_overview/blob/main/images/UDF%20vs.%20Native%20PySpark.png?raw=true)
 
 - 
 - **`WholeStageCodegen` time** reflects Spark’s execution of optimized JVM bytecode.
