@@ -59,12 +59,12 @@ Since this was tested on the `FactInternetSales` table (~60K rows), both execute
     - Results are **deserialized** back to the JVM.
     - This extra processing increases runtime
     
-    ![image.png](attachment:25c7b25d-0535-4a18-8b0d-60b0aa42064a:image.png)
+    ![image_alt](https://github.com/yazanziyad98/databricks_pyspark_overview/blob/main/images/UDF%20vs.%20Native%20PySpark.png?raw=true)
     
 - **Native PySpark**:
     - but for the native code, the **`WholeStageCodegen`**  duration was 0 since The entire operation was so fast that Spark didn’t register measurable time (sub-millisecond execution).
     
-    ![image.png](attachment:bfef68d7-d7b3-4add-83ee-b0a24a10723e:image.png)
+    ![image_alt](https://github.com/yazanziyad98/databricks_pyspark_overview/blob/main/images/WholeStageCodegenNative.png?raw=true)
     
 
 ---
@@ -78,13 +78,13 @@ We compared three join approaches (**Broadcast**, **Sort-Merge**, and **Bucketed
 - Only the small `DimCurrency` table (3.1 KiB) was shuffled.
 - The shuffle contained **10 records** (matching `DimCurrency`'s row count).
 
-![image.png](attachment:8583f07d-f371-401f-bccf-26b9c0243d6d:image.png)
+![image_alt](https://github.com/yazanziyad98/databricks_pyspark_overview/blob/main/images/Broadcast%20Join.png?raw=true)
 
 ### 2. Sort-Merge Join
 
 - Slower than Broadcast Join for this scenario (fact + dimension table join).
 
-![image.png](attachment:5a33603f-e062-4eb0-9547-aa2e05829465:image.png)
+![image_alt](https://github.com/yazanziyad98/databricks_pyspark_overview/blob/main/images/Sort-Merge.png?raw=true)
 
 ### 3. Bucketed Join
 
@@ -93,7 +93,7 @@ We compared three join approaches (**Broadcast**, **Sort-Merge**, and **Bucketed
     - Data sampling
     - Additional preparatory steps
     
-    ![image.png](attachment:d6e8925f-5ab3-45d3-849c-1f707a346804:image.png)
+    ![image_alt](https://github.com/yazanziyad98/databricks_pyspark_overview/blob/main/images/BucketedJoin.png?raw=true)
     
 
 ---
