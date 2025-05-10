@@ -59,7 +59,7 @@ Since this was tested on the `FactInternetSales` table (~60K rows), both execute
     - Results are **deserialized** back to the JVM.
     - This extra processing increases runtime
     
-    ![image_alt](https://github.com/yazanziyad98/databricks_pyspark_overview/blob/main/images/UDF%20vs.%20Native%20PySpark.png?raw=true)
+    ![image_alt](https://github.com/yazanziyad98/databricks_pyspark_overview/blob/main/images/WholeStageCodegen.png?raw=true)
     
 - **Native PySpark**:
     - but for the native code, the **`WholeStageCodegen`**  duration was 0 since The entire operation was so fast that Spark didn’t register measurable time (sub-millisecond execution).
