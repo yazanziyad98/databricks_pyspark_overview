@@ -13,7 +13,7 @@ This notebook provides a comprehensive analysis pipeline for exploring four key 
 
 ### 2. **Power BI Desktop Layer**
 
-- *Still in progress—check back later!*
+- *Still in progress—check back later! 🍳*
 
 ## Current PySpark Implementation
 
