@@ -3,7 +3,7 @@
 
 ## Overview
 
-This notebook provides an analysis pipeline for differenct spark/pyspark concepts using four key tables from the AdventureWorks database across two analytical layers:
+This notebook provides an analysis pipeline for different spark/pyspark concepts using four key tables from the AdventureWorks database across two analytical layers:
 
 ### 1. **PySpark Layer (Databricks)**
 
